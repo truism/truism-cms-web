@@ -1,10 +1,11 @@
 import request from "@/utils/request";
 
 export default {
-    getList(currentPage, pageSize) {
-        return request()({
-            url: `/staffs/${currentPage}/${pageSize}`,
-            method: "GET"
+    getList(page, size, paramMap) {
+        return request({
+            url: `/staffs/search/${page}/${size}`,
+            method: "GET",
+            data: paramMap
         })
     },
 
@@ -12,6 +13,14 @@ export default {
         return request({
             url: `/staffs/${id}`,
             method: "GET"
+        })
+    },
+
+    add(pojo) {
+        return request({
+            url: "/staffs",
+            method: "POST",
+            data: pojo
         })
     },
 
@@ -28,5 +37,5 @@ export default {
             url: `/staffs/${id}`,
             method: "DELETE"
         })
-    },
+    }
 }

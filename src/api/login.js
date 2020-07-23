@@ -27,3 +27,11 @@ export function logout(token) {
         }
     })
 }
+
+export function changePasswd(paramMap) {
+    return request({
+        url: "/user/passwd",
+        method: "PUT",
+        data: paramMap
+    })
+}

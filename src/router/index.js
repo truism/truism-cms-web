@@ -32,6 +32,7 @@ const routes = [
   },
   {
     path: "/member",
+    name: "member",
     component: Layout,
     children: [
       {
@@ -45,6 +46,7 @@ const routes = [
   },
   {
     path: "/supplier",
+    name: "supplier",
     component: Layout,
     children: [
       {
@@ -58,6 +60,7 @@ const routes = [
   },
   {
     path: "/goods",
+    name: "goods",
     component: Layout,
     children: [
       {
@@ -71,6 +74,7 @@ const routes = [
   },
   {
     path: "/staff",
+    name: "staff",
     component: Layout,
     children: [
       {
