@@ -12,28 +12,64 @@
                 <i class="el-icon-s-home"></i>
                 <span slot="title">首页</span>
             </el-menu-item>
-            <el-submenu index="/member/">
+            <el-submenu index="blog">
                 <template slot="title">
-                    <i class="el-icon-location"></i>
-                    <sapn>会员管理</sapn>
+                    <i class="el-icon-s-unfold"></i>
+                    <sapn>博客管理</sapn>
                 </template>
-                <el-menu-item index="/member/">
+                <el-menu-item index="/blog/">
                     <i class="el-icon-user-solid"></i>
-                    <span slot="title">会员管理</span>
+                    <span slot="title">博客列表</span>
+                </el-menu-item>
+                <el-menu-item index="/blog/add">
+                    <i class="el-icon-star-on"></i>
+                    <span slot="title">新增博客</span>
+                </el-menu-item>
+                <el-menu-item index="/blog/draft">
+                    <i class="el-icon-star-off"></i>
+                    <span slot="title">草稿箱</span>
                 </el-menu-item>
             </el-submenu>
-            <el-menu-item index="/supplier/">
-                <i class="el-icon-s-cooperation"></i>
-                <span slot="title">供应商管理</span>
-            </el-menu-item>
-            <el-menu-item index="/goods/">
-                <i class="el-icon-s-goods"></i>
-                <span slot="title">商品管理</span>
-            </el-menu-item>
-            <el-menu-item index="/staff/">
-                <i class="el-icon-user"></i>
-                <span slot="title">员工管理</span>
-            </el-menu-item>
+            <el-submenu index="type">
+                <template slot="title">
+                    <i class="el-icon-s-order"></i>
+                    <sapn>分类管理</sapn>
+                </template>
+                <el-menu-item index="/type/">
+                    <i class="el-icon-s-grid"></i>
+                    <span slot="title">分类列表</span>
+                </el-menu-item>
+            </el-submenu>
+            <el-submenu index="tag" >
+                <template slot="title">
+                    <i class="el-icon-menu"></i>
+                    <sapn>标签管理</sapn>
+                </template>
+                <el-menu-item index="/tag/">
+                    <i class="el-icon-tickets"></i>
+                    <span slot="title">标签列表</span>
+                </el-menu-item>
+            </el-submenu>
+            <el-submenu index="user">
+                <template slot="title">
+                    <i class="el-icon-chat-dot-round"></i>
+                    <sapn>成员管理</sapn>
+                </template>
+                <el-menu-item index="/user/">
+                    <i class="el-icon-chat-dot-square"></i>
+                    <span slot="title">成员列表</span>
+                </el-menu-item>
+            </el-submenu>
+            <el-submenu index="sys">
+                <template slot="title">
+                    <i class="el-icon-setting"></i>
+                    <sapn>系统管理</sapn>
+                </template>
+                <el-menu-item index="/sys/">
+                    <i class="el-icon-s-tools"></i>
+                    <span slot="title">服务器信息</span>
+                </el-menu-item>
+            </el-submenu>
         </el-menu>
     </div>
 </template>

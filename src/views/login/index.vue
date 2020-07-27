@@ -49,23 +49,14 @@ export default {
         if (valid) {
           login(this.form.username, this.form.password).then(response => {
             const resp = response.data;
+            console.log(resp);
             if (resp.flag) {
-              getUserInfo(resp.data.token).then(response => {
-                const respUser = response.data;
-                if (respUser.flag) {
-                  localStorage.setItem(
-                    "user-info",
-                    JSON.stringify(respUser.data)
-                  );
-                  localStorage.setItem("user-token", resp.data.token);
-                  this.$router.push("/");
-                } else {
-                  this.$message({
-                    message: respUser.message,
-                    type: "warning"
-                  });
-                }
-              });
+              localStorage.setItem(
+                      "user-info",
+                      JSON.stringify(resp.data.user)
+              );
+              localStorage.setItem("user-token", resp.data.token);
+              this.$router.push("/");
             } else {
               this.$message({
                 message: resp.message,
