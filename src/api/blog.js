@@ -14,5 +14,13 @@ export default {
             url: `/blog/${id}`,
             method: "DELETE"
         })
+    },
+
+    addBlog(blogBo) {
+        return request({
+            url: "/blog/",
+            method: "POST",
+            data: blogBo
+        })
     }
 }

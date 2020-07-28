@@ -138,7 +138,7 @@
                         typeId: null,
                         tagsId: [],
                         updateTime: null,
-                        draft: true
+                        draft: null
                     }
                 }
             }
