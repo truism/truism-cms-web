@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: "/",
-    name: "home",
+    name: "base_home",
     component: Layout,
     redirect: "/home",
     children: [
@@ -36,7 +36,7 @@ const routes = [
   },
   {
     path: "/blog",
-    name: "blog",
+    name: "base_blog",
     component: Layout,
     children: [
       {
@@ -50,7 +50,7 @@ const routes = [
       {
         path: "add",
         component: AddBlog,
-        name: "add-blog",
+        name: "base_add-blog",
         meta: {
           title: "新增博客"
         }
@@ -67,7 +67,7 @@ const routes = [
   },
   {
     path: "/type",
-    name: "type",
+    name: "base_type",
     component: Layout,
     children: [
       {
@@ -82,7 +82,7 @@ const routes = [
   },
   {
     path: "/tag",
-    name: "tag",
+    name: "base_tag",
     component: Layout,
     children: [
       {
@@ -97,7 +97,7 @@ const routes = [
   },
   {
     path: "/user",
-    name: "user",
+    name: "base_user",
     component: Layout,
     children: [
       {
@@ -112,7 +112,7 @@ const routes = [
   },
   {
     path: "/sys",
-    name: "sys",
+    name: "base_sys",
     component: Layout,
     children: [
       {
