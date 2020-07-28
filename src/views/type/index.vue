@@ -117,11 +117,6 @@
                     const resp = response.data;
                     if(resp.flag) {
                         this.typeList = resp.data;
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        })
                     }
                 })
             },
@@ -136,11 +131,6 @@
                     if(resp.flag) {
                         this.type = resp.data;
                         this.dialogFormVisible = true;
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        })
                     }
                 })
             },
@@ -155,11 +145,6 @@
                         const resp = response.data;
                         if(resp.flag) {
                             this.getTypeList();
-                        }else {
-                            this.$message({
-                                message: resp.message,
-                                type: "warning",
-                            })
                         }
                     })
                 }).catch(() => {
@@ -176,11 +161,6 @@
                     if(resp.flag) {
                         this.getTypeList();
                         this.dialogFormVisible = false;
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        })
                     }
                 })
             },
@@ -193,11 +173,6 @@
                             if(resp.flag) {
                                 this.$refs[formName].resetFields();
                                 this.getTypeList();
-                            }else {
-                                this.$message({
-                                    message: resp.message,
-                                    type: "warning"
-                                })
                             }
                         })
                     }else {

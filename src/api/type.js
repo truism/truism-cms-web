@@ -1,6 +1,14 @@
 import request from "@/utils/request";
 
 export default {
+
+    getAllType() {
+        return request({
+            url: "/type/all",
+            method: "GET"
+        })
+    },
+
     getTypeList(typeName) {
         return request({
             url: "/type/list" + "?name=" + typeName,

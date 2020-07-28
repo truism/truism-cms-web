@@ -11,7 +11,7 @@ export default {
 
     getTagByName(tagName) {
       return request({
-          url: `/tag/name/${tagName}`,
+          url: "/tag/name?name=" + tagName,
           method: "GET"
       })
     },

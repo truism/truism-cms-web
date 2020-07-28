@@ -65,7 +65,7 @@
             return {
                 tagList: [],
                 tagName: "",
-                pageNum: 0,
+                pageNum: 1,
                 pageSize: 10,
                 total: 0,
                 tag: {
@@ -88,11 +88,6 @@
                         this.pageSize = 10;
                         this.pageNum = 0;
                         this.total = this.tagList.length;
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        });
                     }
                 })
             },
@@ -105,11 +100,6 @@
                         this.pageSize = resp.data.pageSize;
                         this.pageNum = resp.data.pageNum;
                         this.total = resp.data.total;
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        });
                     }
                 })
             },
@@ -129,11 +119,6 @@
                     const resp = response.data;
                     if(resp.flag) {
                         this.tagList = resp.data;
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        })
                     }
                 })
             },
@@ -151,11 +136,6 @@
                     if(resp.flag) {
                         this.dialogFormVisible = false;
                         this.getAllTag();
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        })
                     }
                 })
             },
@@ -165,12 +145,6 @@
                     const resp = response.data;
                     if(resp.flag) {
                         this.tag = resp.data;
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        });
-                        return false;
                     }
                 });
                 this.dialogFormVisible = true;
@@ -182,11 +156,6 @@
                     if(resp.flag) {
                         this.dialogFormVisible = false;
                         this.getAllTag();
-                    }else {
-                        this.$message({
-                            message: resp.message,
-                            type: "warning"
-                        })
                     }
                 })
             },
@@ -201,11 +170,6 @@
                         const  resp = response.data;
                         if(resp.flag) {
                             this.getAllTag();
-                        }else {
-                            this.$message({
-                                message: resp.message,
-                                type: "warning"
-                            })
                         }
                     })
                 }).catch(() => {
