@@ -22,5 +22,20 @@ export default {
             method: "POST",
             data: blogBo
         })
+    },
+
+    getBlogById(id) {
+        return request({
+            url: `/blog/${id}`,
+            method: "GET"
+        })
+    },
+
+    updateBlog(blog) {
+        return request({
+            url: "/blog/",
+            method: "PUT",
+            data: blog
+        })
     }
 }

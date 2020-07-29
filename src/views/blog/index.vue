@@ -180,7 +180,12 @@
             },
 
             handleEdit: function (id) {
-
+                this.$router.push({
+                    name: 'base_add-blog',
+                    params: {
+                        id: id
+                    }
+                })
             },
 
             handleDelete: function (id) {

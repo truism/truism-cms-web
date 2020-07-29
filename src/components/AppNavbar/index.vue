@@ -25,10 +25,6 @@
                     <i class="el-icon-star-on"></i>
                     <span slot="title">新增博客</span>
                 </el-menu-item>
-                <el-menu-item index="/blog/draft">
-                    <i class="el-icon-star-off"></i>
-                    <span slot="title">草稿箱</span>
-                </el-menu-item>
             </el-submenu>
             <el-submenu index="type">
                 <template slot="title">

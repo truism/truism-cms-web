@@ -54,14 +54,6 @@ const routes = [
         meta: {
           title: "新增博客"
         }
-      },
-      {
-        path: "draft",
-        component: Draft,
-        name: "draft",
-        meta: {
-          title: "草稿箱"
-        }
       }
     ]
   },

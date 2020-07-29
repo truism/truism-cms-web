@@ -117,6 +117,7 @@
                 tagList: [],
                 typeList: [],
                 blog: {
+                    id: null,
                     title: "",
                     typeId: null,
                     tagsId: [],
@@ -135,6 +136,7 @@
         created() {
             this.getTypeList();
             this.getTagList();
+            this.initBlog();
         },
 
         methods: {
@@ -154,6 +156,19 @@
                         this.typeList = resp.data;
                     }
                 })
+            },
+
+            initBlog: function() {
+                let id = this.$route.params.id;
+                if(id) {
+                    blogApi.getBlogById(id).then(response => {
+                        const resp = response.data;
+                        if(resp.flag) {
+                            this.blog = resp.data;
+                            this.blog.id = id;
+                        }
+                    })
+                }
             },
 
             addBlog: function(formName) {
@@ -181,7 +196,7 @@
                 this.$refs[formName].validate(valid => {
                     if(valid) {
                         this.blog.draft = false;
-                        blogApi.addBlog(this.blog).then(response => {
+                        blogApi.updateBlog(this.blog).then(response => {
                             const resp = response.data;
                             if(resp.flag) {
                                 this.$refs['blogForm'].resetFields();
