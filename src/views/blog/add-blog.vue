@@ -93,7 +93,7 @@
                     ul: true, // 无序列表
                     link: true, // 链接
                     imagelink: true, // 图片链接
-                    code: false, // code
+                    code: true, // code
                     table: true, // 表格
                     fullscreen: true, // 全屏编辑
                     readmodel: true, // 沉浸式阅读
