@@ -11,6 +11,8 @@ import User from "../views/user"
 import Sys from "../views/sys"
 import AddBlog from "../views/blog/add-blog"
 import Draft from "../views/blog/draft"
+import {Message} from "element-ui";
+import Msg from "../views/message"
 
 Vue.use(VueRouter);
 
@@ -22,7 +24,6 @@ const routes = [
   },
   {
     path: "/",
-    name: "base_home",
     component: Layout,
     redirect: "/home",
     children: [
@@ -36,7 +37,6 @@ const routes = [
   },
   {
     path: "/blog",
-    name: "base_blog",
     component: Layout,
     children: [
       {
@@ -59,7 +59,6 @@ const routes = [
   },
   {
     path: "/type",
-    name: "base_type",
     component: Layout,
     children: [
       {
@@ -74,7 +73,6 @@ const routes = [
   },
   {
     path: "/tag",
-    name: "base_tag",
     component: Layout,
     children: [
       {
@@ -89,7 +87,6 @@ const routes = [
   },
   {
     path: "/user",
-    name: "base_user",
     component: Layout,
     children: [
       {
@@ -103,8 +100,21 @@ const routes = [
     ]
   },
   {
+    path: "/message",
+    component: Layout,
+    children: [
+      {
+        path: "/",
+        component: Msg,
+        name: "msg",
+        meta: {
+          title: "留言管理"
+        }
+      }
+    ]
+  },
+  {
     path: "/sys",
-    name: "base_sys",
     component: Layout,
     children: [
       {

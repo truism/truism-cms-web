@@ -46,6 +46,16 @@
                     <span slot="title">标签列表</span>
                 </el-menu-item>
             </el-submenu>
+            <el-submenu index="msg" >
+                <template slot="title">
+                    <i class="el-icon-menu"></i>
+                    <sapn>留言管理</sapn>
+                </template>
+                <el-menu-item index="/message/">
+                    <i class="el-icon-tickets"></i>
+                    <span slot="title">留言列表</span>
+                </el-menu-item>
+            </el-submenu>
             <el-submenu index="user">
                 <template slot="title">
                     <i class="el-icon-chat-dot-round"></i>
